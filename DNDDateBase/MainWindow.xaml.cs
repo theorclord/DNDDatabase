@@ -27,6 +27,9 @@ namespace DNDDateBase
 
       // Initialize tab panes
       charPane.Content = new CharacterControl();
+      locationPane.Content = new LocationControl();
+      cityPane.Content = new CityControl();
+      objIntPane.Content = new ObjectOfInterestControl();
     }
   }
 }

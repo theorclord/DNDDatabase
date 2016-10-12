@@ -58,9 +58,15 @@
                     </Grid>
                 </Grid>-->
             </TabItem>
-            <TabItem Header="Citys" />
-            <TabItem Header="Locations" />
-            <TabItem Header="Objects of Interest" />
+            <TabItem Header="Citys">
+                <ContentControl Name="cityPane"/>
+            </TabItem>
+            <TabItem Header="Locations">
+                <ContentControl Name="locationPane"/>
+            </TabItem>
+            <TabItem Header="Objects of Interest">
+                <ContentControl Name="objIntPane" />
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

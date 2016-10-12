@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace DNDDateBase.Utility
 {
-  public class ObjectOfInterest
+  public class Item : DNDAppObj
   {
-    public string Name { get; set; }
     public string Notes { get; set; }
   }
 }

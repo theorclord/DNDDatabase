@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="DNDDateBase.CharacterControl"
+﻿<UserControl x:Class="DNDDateBase.CityControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -16,7 +16,7 @@
             <RowDefinition Height="45"/>
         </Grid.RowDefinitions>
         <!-- Character Detail section-->
-        <Grid Name="grdCharSel" Grid.Column="0" Grid.Row="0"  >
+        <Grid Name="grdLocSel" Grid.Column="0" Grid.Row="0"  >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
@@ -25,7 +25,7 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid Grid.Column="0" Grid.Row="0">
-                <Label Content="Character Details" FontWeight="Bold" />
+                <Label Content="City Details" FontWeight="Bold" />
             </Grid>
             <Grid Grid.Column="0" Grid.Row="1">
                 <StackPanel Margin="10">
@@ -41,17 +41,17 @@
 
         <!-- List of Characters -->
         <Grid Grid.Column="1" Grid.Row="0">
-            <ListBox Name="lbChars"  MouseDoubleClick="lbChars_MouseDoubleClick"/>
+            <ListBox Name="lbCitys"  MouseDoubleClick="lbCitys_MouseDoubleClick"/>
         </Grid>
         <!-- Buttons for the tab pane-->
         <Grid Grid.Column="0" Grid.Row="1">
-            <Button FontWeight="Bold" Name="btnSaveChar" Click="btnSaveChar_Click" Margin="10">
-                <Button.Content>Save Character</Button.Content>
+            <Button FontWeight="Bold" Name="btnSaveCity" Click="btnSaveCity_Click" Margin="10">
+                <Button.Content>Save City</Button.Content>
             </Button>
         </Grid>
         <Grid Grid.Column="1" Grid.Row="1">
-            <Button FontWeight="Bold" Name="btnAddChar" Click="btnAddChar_Click" Margin="10">
-                <Button.Content>Add New Character</Button.Content>
+            <Button FontWeight="Bold" Name="btnDeleteCity" Click="btnDeleteCity_Click" Margin="10">
+                <Button.Content>Delete City</Button.Content>
             </Button>
         </Grid>
     </Grid>

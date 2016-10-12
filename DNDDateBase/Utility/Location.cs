@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace DNDDateBase.Utility
 {
-  public class Location
+  public class Location : DNDAppObj
   {
-    public string Name { get; set; }
     public string Notes { get; set; }
   }
 }

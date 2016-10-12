@@ -8,6 +8,5 @@
              Exit="Application_Exit">
     <!--StartupUri="MainWindow.xaml"-->
     <Application.Resources>
-        <sys:String x:Key="strChar">Svend, knight</sys:String>
     </Application.Resources>
 </Application>

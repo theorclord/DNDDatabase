@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace DNDDateBase.Utility
 {
-  public class Character
+  [Serializable]
+  public class Character : DNDAppObj
   {
-    public string Name { get; set; }
     public string Notes { get; set; }
-
-
-    public override string ToString()
-    {
-      return Name;
-    }
   }
 }
