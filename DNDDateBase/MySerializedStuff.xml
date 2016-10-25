@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializedDataContainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <chars>
+    <Character>
+      <Name>asd</Name>
+      <Notes>asd</Notes>
+    </Character>
+    <Character>
+      <Name>rgsgf</Name>
+      <Notes>sg</Notes>
+    </Character>
+    <Character>
+      <Name>gdfh</Name>
+      <Notes>dgfh</Notes>
+    </Character>
+    <Character>
+      <Name>gadgs</Name>
+      <Notes>asd</Notes>
+    </Character>
+    <Character>
+      <Name>awexva</Name>
+      <Notes>afasdasas</Notes>
+    </Character>
+    <Character>
+      <Name>Borge</Name>
+      <Notes />
+    </Character>
+  </chars>
+  <cities>
+    <City>
+      <Name>adsfdfg</Name>
+      <Notes>asgdf</Notes>
+    </City>
+    <City>
+      <Name>wqeqg</Name>
+      <Notes>asdas</Notes>
+    </City>
+  </cities>
+  <locs />
+  <items>
+    <Item>
+      <Name>asd</Name>
+      <Notes>ads</Notes>
+    </Item>
+  </items>
+</SerializedDataContainer>

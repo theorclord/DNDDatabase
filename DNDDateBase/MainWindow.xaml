@@ -2,71 +2,45 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        Title="D&amp;DApplication" Height="800" Width="600">
-
-    <Grid>
-        <TabControl>
-            <TabItem Header="Characters">
-                <ContentControl Name="charPane"/>
-                <!--<Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition Height="45"/>
-                    </Grid.RowDefinitions>
-                    --><!-- Character Detail section--><!--
-                    <Grid Name="grdCharSel" Grid.Column="0" Grid.Row="0"  >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="30" />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Column="0" Grid.Row="0">
-                            <Label Content="Character Details" FontWeight="Bold" />
-                        </Grid>
-                        <Grid Grid.Column="0" Grid.Row="1">
-                            <StackPanel Margin="10">
-                                <WrapPanel>
-                                    <Label Content="_Name:" Target="{Binding ElementName=txtName}" />
-                                    <TextBox Name="txtName" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                                </WrapPanel>
-                                <Label Content="N_otes:" Target="{Binding ElementName=txtNotes}" />
-                                <TextBox Name="txtNotes" AcceptsReturn="True" TextWrapping="Wrap" Height="120"/>
-                            </StackPanel>
-                        </Grid>
-                    </Grid>
-                    
-                    --><!-- List of Characters --><!--
-                    <Grid Grid.Column="1" Grid.Row="0">
-                        <ListBox Name="lbChars"  MouseDoubleClick="lbChars_MouseDoubleClick"/>
-                    </Grid>
-                    --><!-- Buttons for the tab pane--><!--
-                    <Grid Grid.Column="0" Grid.Row="1">
-                        <Button FontWeight="Bold" Name="btnSaveChar" Click="btnSaveChar_Click">
-                            <Button.Content>Save Character</Button.Content>
-                        </Button>
-                    </Grid>
-                    <Grid Grid.Column="1" Grid.Row="1">
-                        <Button FontWeight="Bold" Name="btnAddChar" Click="btnAddChar_Click">
-                            <Button.Content>Add New Character</Button.Content> 
-                        </Button>
-                    </Grid>
-                </Grid>-->
-            </TabItem>
-            <TabItem Header="Citys">
-                <ContentControl Name="cityPane"/>
-            </TabItem>
-            <TabItem Header="Locations">
-                <ContentControl Name="locationPane"/>
-            </TabItem>
-            <TabItem Header="Objects of Interest">
-                <ContentControl Name="objIntPane" />
-            </TabItem>
-        </TabControl>
-    </Grid>
+        xmlns:custom="clr-namespace:DNDDateBase"
+        Title="D&amp;DApplication" Height="600" Width="600">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="SaveFileShortCut" />
+    </Window.CommandBindings>
+    <DockPanel Margin="10">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" Click="MenuItemNew_Click"/>
+                <MenuItem Header="_Open" Click="MenuItemOpen_Click" />
+                <MenuItem Header="_Save" Click="MenuItemSave_Click" Command="ApplicationCommands.Save"/>
+                <Separator />
+                <MenuItem Header="_Exit" Click="MenuItemExit_Click" />
+            </MenuItem>
+        </Menu>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label Name="saveLbl" Visibility="Hidden" Content="Saved file"></Label>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TabControl>
+                    <TabItem Header="Characters">
+                        <ContentControl Name="charPane"/>
+                    </TabItem>
+                    <TabItem Header="Citys">
+                        <ContentControl Name="cityPane"/>
+                    </TabItem>
+                    <TabItem Header="Locations">
+                        <ContentControl Name="locationPane"/>
+                    </TabItem>
+                    <TabItem Header="Objects of Interest">
+                        <ContentControl Name="itemPane" />
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </Grid>
+    </DockPanel>
 </Window>

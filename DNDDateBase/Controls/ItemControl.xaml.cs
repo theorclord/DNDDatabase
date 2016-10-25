@@ -19,9 +19,9 @@ namespace DNDDateBase
   /// <summary>
   /// Interaction logic for ObjectOfInterestControl.xaml
   /// </summary>
-  public partial class ObjectOfInterestControl : UserControl
+  public partial class ItemControl : UserControl
   {
-    public ObjectOfInterestControl()
+    public ItemControl()
     {
       InitializeComponent();
       List<Item> items = Application.Current.FindResource("Items") as List<Item>;
