@@ -67,11 +67,14 @@
     <Compile Include="Controls\ItemControl.xaml.cs">
       <DependentUpon>ItemControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Utility\Character.cs" />
-    <Compile Include="Utility\City.cs" />
-    <Compile Include="Utility\DNDAppObj.cs" />
-    <Compile Include="Utility\Location.cs" />
-    <Compile Include="Utility\Item.cs" />
+    <Compile Include="Serialization\SerializationHandler.cs" />
+    <Compile Include="Serialization\SerializedDataContainer.cs" />
+    <Compile Include="AppObjects\Character.cs" />
+    <Compile Include="AppObjects\City.cs" />
+    <Compile Include="AppObjects\DNDAppObj.cs" />
+    <Compile Include="AppObjects\Location.cs" />
+    <Compile Include="AppObjects\Item.cs" />
+    <Compile Include="Utility\Constants.cs" />
     <Page Include="Controls\CharacterControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

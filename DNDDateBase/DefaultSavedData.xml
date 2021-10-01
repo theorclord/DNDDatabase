@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializedDataContainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Characters>
+    <Character>
+      <ID>8d7cdbe6-6bf4-4d88-9b2d-4dc96f9f63ad</ID>
+      <Name>Bob</Name>
+      <Notes>He is the builder
+Now a man</Notes>
+    </Character>
+    <Character>
+      <ID>bc0d8bcc-0190-4114-82f4-421800ccca13</ID>
+      <Name>Anders</Name>
+      <Notes>The new guy</Notes>
+    </Character>
+    <Character>
+      <ID>9727bbb3-17f0-4fcd-a747-21b9faedef31</ID>
+      <Name>Carl</Name>
+      <Notes>MyCarl</Notes>
+    </Character>
+    <Character>
+      <ID>5515772b-db85-4798-a3d0-9cf72d974e30</ID>
+      <Name>Not Bob</Name>
+      <Notes>This is not bob</Notes>
+    </Character>
+  </Characters>
+  <Cities>
+    <City>
+      <ID>b43b901e-a0f3-4254-9b19-383f8405ef46</ID>
+      <Name>New</Name>
+      <Notes>New City</Notes>
+    </City>
+  </Cities>
+  <Locations />
+  <Items />
+</SerializedDataContainer>

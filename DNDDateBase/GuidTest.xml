@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializedDataContainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Characters>
+    <Character>
+      <ID>a4626e92-a2b4-4a9c-865f-d1b7371524d1</ID>
+      <Name>My New Char</Name>
+      <Notes>This have notes</Notes>
+    </Character>
+  </Characters>
+  <Cities />
+  <Locations />
+  <Items />
+</SerializedDataContainer>

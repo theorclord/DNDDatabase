@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializedDataContainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Characters>
+    <Character>
+      <Name>Bob</Name>
+      <Notes>He is the builder</Notes>
+    </Character>
+    <Character>
+      <Name>Anders</Name>
+      <Notes>The new guy</Notes>
+    </Character>
+    <Character>
+      <Name>Carl</Name>
+      <Notes>MyCarl</Notes>
+    </Character>
+  </Characters>
+  <Cities>
+    <City>
+      <Name>New</Name>
+      <Notes>New City</Notes>
+    </City>
+  </Cities>
+  <Locations />
+  <Items />
+</SerializedDataContainer>
