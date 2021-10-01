@@ -1,4 +1,5 @@
 ﻿using DNDDateBase.Utility;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,6 +17,7 @@ namespace DNDDateBase.Serialization
 
         public static void SaveDataToFile(SerializedDataContainer data, string SaveFilePath)
         {
+            string serialData = JsonConvert.SerializeObject(data);
             // Save the data to the file
             XmlSerializer serializer = new XmlSerializer(typeof(SerializedDataContainer));
             TextWriter writer = new StreamWriter(SaveFilePath);
