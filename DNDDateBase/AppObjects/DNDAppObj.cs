@@ -33,5 +33,15 @@ namespace DNDDateBase.Utility
         {
             return Name;
         }
+
+        public override bool Equals(object obj)
+        {
+            return ((IEquatable<DNDAppObj>)this).Equals(obj as DNDAppObj);
+        }
+
+        public override int GetHashCode()
+        {
+            return ID.GetHashCode();
+        }
     }
 }
