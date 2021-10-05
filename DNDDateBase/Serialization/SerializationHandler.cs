@@ -1,4 +1,5 @@
 ﻿using DNDDateBase.Utility;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,15 +13,14 @@ namespace DNDDateBase.Serialization
 {
     public class SerializationHandler
     {
-        public static readonly string DefaultSaveFilePath = @"..\..\..\DNDDateBase\DefaultSavedData.xml";
-
         public static void SaveDataToFile(SerializedDataContainer data, string SaveFilePath)
         {
-            // Save the data to the file
-            XmlSerializer serializer = new XmlSerializer(typeof(SerializedDataContainer));
-            TextWriter writer = new StreamWriter(SaveFilePath);
-            serializer.Serialize(writer, data);
-            writer.Close();
+            // Save the Data as JSON
+            string serialData = JsonConvert.SerializeObject(data);
+            using(TextWriter jSonWriter = new StreamWriter(SaveFilePath))
+            {
+                jSonWriter.Write(serialData);
+            }
         }
 
         public static SerializedDataContainer LoadData(string filePathName)
@@ -28,19 +28,20 @@ namespace DNDDateBase.Serialization
             SerializedDataContainer appData = null;
             if (File.Exists(filePathName))
             {
-                XmlSerializer deserializer = new XmlSerializer(typeof(SerializedDataContainer));
-
-                StreamReader dataReader = new StreamReader(filePathName);
-                XmlReader xmlDataReader = new XmlTextReader(dataReader);
-
-                if (deserializer.CanDeserialize(xmlDataReader))
+                string jsonString = "";
+                using (TextReader reader = new StreamReader(filePathName))
                 {
-                    appData = (SerializedDataContainer)deserializer.Deserialize(xmlDataReader);
+                    jsonString = reader.ReadToEnd();
                 }
-                dataReader.Close();
-                xmlDataReader.Close();
+                appData = JsonConvert.DeserializeObject<SerializedDataContainer>(jsonString);
             }
             return appData;
+        }
+
+        public static string GetDefaultSavePath()
+        {
+            string path = AppContext.BaseDirectory + @"\Saves\DefaultSave.json";
+            return path;
         }
     }
 }

@@ -42,8 +42,8 @@ namespace DNDDateBase
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            CurrentSaveFilePath = SerializationHandler.GetDefaultSavePath();
             // Load standard file
-            CurrentSaveFilePath = SerializationHandler.DefaultSaveFilePath;
             SerializedDataContainer appData = SerializationHandler.LoadData(CurrentSaveFilePath);
             if (appData != null)
             {
@@ -55,7 +55,7 @@ namespace DNDDateBase
             }
 
             // Set file filter
-            Application.Current.Resources.Add(Constants.FileFilterName, "Xml file (*.xml)|*.xml| All Files |*.*| Text file (*.txt)|*.txt");
+            Application.Current.Resources.Add(Constants.FileFilterName, Constants.FileFilterString);
 
             // TODO
             // Create object relation
@@ -99,12 +99,12 @@ namespace DNDDateBase
         private SerializedDataContainer GetSerializedData()
         {
             // Find the current data stored in the application resources.
-            SerializedDataContainer data = new SerializedDataContainer
+            SerializedDataContainer data = new SerializedDataContainer()
             {
-                Characters = (List<Character>)Application.Current.FindResource("Characters"),
-                Cities = (List<City>)Application.Current.FindResource("Cities"),
-                Locations = (List<Location>)Application.Current.FindResource("Locations"),
-                Items = (List<Item>)Application.Current.FindResource("Items")
+                Characters = (List<Character>)Application.Current.FindResource(nameof(SerializedDataContainer.Characters)),
+                Cities = (List<City>)Application.Current.FindResource(nameof(SerializedDataContainer.Cities)),
+                Locations = (List<Location>)Application.Current.FindResource(nameof(SerializedDataContainer.Locations)),
+                Items = (List<Item>)Application.Current.FindResource(nameof(SerializedDataContainer.Items))
             };
 
             return data;
