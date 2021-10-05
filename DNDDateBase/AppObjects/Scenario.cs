@@ -1,11 +1,12 @@
-﻿using DNDDateBase.AppObjects;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace DNDDateBase.Serialization
+namespace DNDDateBase.AppObjects
 {
-    public class SerializedDataContainer
+    /// <summary>
+    /// Main container for all objects related to a scenario
+    /// </summary>
+    public class Scenario : DNDAppObj
     {
-        public Scenario Scenario { get; set; }
         public List<Character> Characters { get; set; }
         public List<City> Cities { get; set; }
         public List<Location> Locations { get; set; }

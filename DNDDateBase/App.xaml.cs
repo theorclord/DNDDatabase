@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Input;
-using System.Xml;
-using System.Xml.Serialization;
 using DNDDateBase.Serialization;
 using DNDDateBase.Utility;
+using DNDDateBase.AppObjects;
 
 namespace DNDDateBase
 {

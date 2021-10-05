@@ -19,6 +19,7 @@
         </Menu>
         <Grid Margin="10">
             <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
                 <RowDefinition Height="40"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
@@ -26,6 +27,9 @@
                 <Label Name="saveLbl" Visibility="Hidden" Content="Saved file"></Label>
             </Grid>
             <Grid Grid.Row="1">
+                <Label Name="scenarioLbl" Content="Scenario:" FontSize="24" FontWeight="Bold"></Label>
+            </Grid>
+            <Grid Grid.Row="2">
                 <TabControl>
                     <TabItem Header="Characters">
                         <ContentControl Name="charPane"/>
@@ -42,5 +46,6 @@
                 </TabControl>
             </Grid>
         </Grid>
+        <WrapPanel Width="100"/>
     </DockPanel>
 </Window>

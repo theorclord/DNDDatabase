@@ -1,8 +1,5 @@
-﻿using System;
-
-namespace DNDDateBase.Utility
+﻿namespace DNDDateBase.AppObjects
 {
-    [Serializable]
     public class Character : DNDAppObj
     {
     }

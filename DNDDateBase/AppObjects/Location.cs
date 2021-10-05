@@ -1,4 +1,4 @@
-﻿namespace DNDDateBase.Utility
+﻿namespace DNDDateBase.AppObjects
 {
     public class Location : DNDAppObj
     {
